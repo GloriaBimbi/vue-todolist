@@ -5,7 +5,7 @@ const app = createApp({
       toDoElements: [
         {
           text: "Fare la spesa",
-          done: true,
+          done: false,
         },
         {
           text: "Studiare per interrogazione",
@@ -28,6 +28,11 @@ const app = createApp({
           done: false,
         },
       ],
+
+      newToDoElement: {
+        text: "",
+        done: false,
+      },
     };
   },
 
@@ -37,6 +42,15 @@ const app = createApp({
     },
     delateToDoElement(i) {
       this.toDoElements.splice(i, 1);
+    },
+    addNewToDoElement() {
+      const newToDoElements = { ...this.newToDoElement };
+      if (this.newToDoElement.text != "") {
+        this.toDoElements.push(newToDoElements);
+        this.newToDoElement.text = "";
+      } else {
+        alert("Attenzione! Non hai dato un nome alla nuova task");
+      }
     },
   },
   mounted() {},

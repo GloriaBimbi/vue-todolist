@@ -41,12 +41,18 @@
           <h1>My To Do List</h1>
           <label for="new-todo">Add new to do: </label>
           <br />
-          <input type="text" id="new-todo" placeholder="Andare a danza" />
-          <button class="btn-success">Save</button>
+          <input
+            v-model="newToDoElement.text"
+            @keyUp.enter="addNewToDoElement()"
+            type="text"
+            id="new-todo"
+            placeholder="Andare a danza"
+          />
+          <button @click="addNewToDoElement()" class="btn-success">Add</button>
           <ul id="to-do-list">
             <li v-for="(toDoElement, index) in toDoElements">
               <span
-                :class="!toDoElement.done ? 'text-decoration-line-through' : ''"
+                :class="toDoElement.done ? 'text-decoration-line-through' : ''"
                 @click="invertStatus(index)"
                 class="to-do-text"
               >
