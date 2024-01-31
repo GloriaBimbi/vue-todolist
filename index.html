@@ -51,7 +51,7 @@
                 class="to-do-text"
               >
                 {{ toDoElement.text }} </span
-              ><span class="cross-circle"><span class="cross">❌</span></span>
+              ><span @click="delateToDoElement(index)" class="cross">❌</span>
             </li>
           </ul>
         </div>

@@ -35,6 +35,9 @@ const app = createApp({
     invertStatus(i) {
       this.toDoElements[i].done = !this.toDoElements[i].done;
     },
+    delateToDoElement(i) {
+      this.toDoElements.splice(i, 1);
+    },
   },
   mounted() {},
 });

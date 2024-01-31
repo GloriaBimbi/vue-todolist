@@ -57,15 +57,11 @@ h1 {
   cursor: pointer;
 }
 
-.cross-circle {
-  border-radius: 50%;
-  height: 20px;
+.cross {
   padding: 5px;
+  border-radius: 50%;
   border: 1px solid red;
   background-color: rgb(245, 61, 61, 0.5);
+  text-align: center;
   cursor: pointer;
-}
-
-.cross {
-  line-height: 100%;
 }
