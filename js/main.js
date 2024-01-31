@@ -5,7 +5,7 @@ const app = createApp({
       toDoElements: [
         {
           text: "Fare la spesa",
-          done: false,
+          done: true,
         },
         {
           text: "Studiare per interrogazione",
@@ -31,7 +31,11 @@ const app = createApp({
     };
   },
 
-  methods: {},
+  methods: {
+    invertStatus(i) {
+      this.toDoElements[i].done = !this.toDoElements[i].done;
+    },
+  },
   mounted() {},
 });
 
